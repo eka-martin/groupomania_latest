@@ -14,20 +14,11 @@ export const PostCard = styled.div`
   height: 200px;
   margin-right: 500px;
   margin-left: 100px;
-  @media (max-width: 820px) {
-    left: 7%;
-    top: 15%;
-  }
+  
   @media (max-width: 768px) {
     left: 5%;
   }
-  @media (max-width: 414px) {
-    position: absolute;
-    left: -10%;
-    top: 15%;
-    margin-right: 0;
-    margin-left: 0;
-  }
+  
   @media (max-width: 375px) {
     left: 0%;
     top: 12%;
