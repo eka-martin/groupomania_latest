@@ -22,18 +22,12 @@ export const PostCard = styled.div`
 export const PostName = styled.h1`
   position: relative;
   left: 50%;
-  color: white;
+  color: black;
   font-size: 40px;
-  @media (max-width: 820px) {
-    font-size: 35px;
-    left: 25%;
-  }
+  
   @media (max-width: 768px) {
     left: 20%;
     top: 5%;
-  }
-  @media (max-width: 414px) {
-    left: 0%;
   }
   @media (max-width: 375px) {
     font-size: 30px;
@@ -42,13 +36,10 @@ export const PostName = styled.h1`
 `;
 export const PostDescription = styled.p`
   position: relative;
-  color: white;
+  color: black;
   font-size: 30px;
   font-weight: 600;
-  @media (max-width: 820px) {
-    font-size: 19px;
-    left: -17%;
-  }
+  
   @media (max-width: 768px) {
     left: -15%;
     font-size: 18px;
@@ -65,21 +56,10 @@ export const PostImage = styled.img`
   max-height: 500px;
   border-radius: 10px;
   margin-top: 20px;
-  @media (max-width: 632px) {
+  @media (max-width: 768px) {
     left: -15%;
   }
-  @media (max-width: 556px) {
-    min-width: 400px;
-    max-height: 400px;
-  }
-  @media (max-width: 466px) {
-    left: -20%;
-    min-width: 300px;
-    max-height: 300px;
-  }
-  @media (max-width: 414px) {
-    left: 5%;
-  }
+  
   @media (max-width: 375px) {
     min-width: 200px;
     margin-top: 0px;
@@ -90,27 +70,12 @@ export const Buttons = styled.div`
   position: absolute;
   left: 70%;
   bottom: 40%;
-  @media (max-width: 1286px) {
-    bottom: 14%;
-  }
-  @media (max-width: 1046px) {
-    left: 45%;
-  }
-  @media (max-width: 820px) {
-    left: 32%;
-    bottom: 12%;
-  }
+  
   @media (max-width: 768px) {
     left: 32%;
     bottom: 9%;
   }
-  @media (max-width: 466px) {
-    left: 18%;
-  }
-  @media (max-width: 414px) {
-    left: 15%;
-    bottom: 20%;
-  }
+  
   @media (max-width: 375px) {
     bottom: 10%;
     left: 10%;
@@ -144,27 +109,10 @@ export const LikeAndDislike = styled.div`
   position: absolute;
   left: 76%;
   bottom: 30%;
-  @media (max-width: 1286px) {
-    bottom: 5%;
-    left: 80%;
-  }
-  @media (max-width: 1046px) {
-    left: 57%;
-  }
-  @media (max-width: 820px) {
-    left: 45%;
-    bottom: 5%;
-  }
+  
   @media (max-width: 768px) {
     left: 38%;
     bottom: 3%;
-  }
-  @media (max-width: 466px) {
-    left: 30%;
-  }
-  @media (max-width: 414px) {
-    left: 30%;
-    bottom: 10%;
   }
   @media (max-width: 375px) {
     bottom: 0%;

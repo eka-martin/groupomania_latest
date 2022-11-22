@@ -18,38 +18,30 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
-        <Route
-          path="/my-posts"
-          element={
+        <Route path="/my-posts" element={
             <PrivateRoute>
               <Posts />
             </PrivateRoute>
-          }
-        ></Route>
-        <Route
-          path="/create-post"
-          element={
+          }>
+        </Route>
+        <Route path="/create-post" element={
             <PrivateRoute>
               <Create />
             </PrivateRoute>
-          }
-        ></Route>
-        <Route
-          path="/see-one/:id"
-          element={
+          }>
+        </Route>
+        <Route path="/see-one/:id" element={
             <PrivateRoute>
               <SeeOne />
             </PrivateRoute>
-          }
-        ></Route>
-        <Route
-          path="/modify/:id"
-          element={
+          }>
+        </Route>
+        <Route path="/modify/:id" element={
             <PrivateRoute>
               <Modify />
             </PrivateRoute>
-          }
-        ></Route>
+          }>
+        </Route>
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

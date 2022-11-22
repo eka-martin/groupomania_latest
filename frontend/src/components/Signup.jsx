@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { MainImageSignup, MainTitle, SuperContainer, LoginCard, Groupomania, InsistOnBlue, InputStyle, ValidateStyle, RedirectSignup } from "../utils/style/Login&Signup"
+import { MainImageSignup, MainTitle, SuperContainer, LoginCard, Groupomania, InputStyle, ValidateStyle, RedirectSignup } from "../utils/style/Login&Signup"
 
 function Signup() {
 
@@ -39,17 +39,24 @@ function Signup() {
     <>
       <MainImageSignup></MainImageSignup>
       <SuperContainer>
-        <Groupomania><InsistOnBlue>Groupo</InsistOnBlue>mania</Groupomania>
         <LoginCard>
+          <Groupomania>Groupomania</Groupomania>
           <MainTitle>Créer un compte</MainTitle>
           <form onSubmit={handleSubmit(onSubmit)}>
             <InputStyle type="text" name="email" placeholder="email" rules={{ required: true }} {...register('email', { required: true })}></InputStyle>
             <InputStyle type="password" name="password" placeholder="mot de passe" rules={{ required: true }} {...register('password', { required: true })}></InputStyle>
             <ValidateStyle type="submit" name="valider" value="Valider"></ValidateStyle>
           </form>
+          <RedirectSignup>
+            Vous avez déjà un compte ? Connectez-vous
+            <Link
+              style={linkStyle}
+              to="/">ici
+            </Link>
+          </RedirectSignup>
         </LoginCard>
       </SuperContainer>
-      <RedirectSignup>Vous avez déjà un compte ? Connectez-vous <Link style={linkStyle} to="/">ici</Link></RedirectSignup>
+
     </>
   );
 }

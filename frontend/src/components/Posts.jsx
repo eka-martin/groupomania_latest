@@ -33,7 +33,7 @@ const Notes = () => {
       .get("http://localhost:4000/api/posts")
       .then((res) => {
         setPosts(res.data);
-        })
+      })
       .catch((err) => {
         console.log(err);
       });
@@ -43,18 +43,38 @@ const Notes = () => {
     <>
       <NavShape>
         <NavTitle>Publications</NavTitle>
-        <Link style={linkStyle} to="/create-post"><NavCreatePosts>Créer une publication</NavCreatePosts></Link>
-        <NavElementLogoutPosts onClick={logout}>Se déconnecter</NavElementLogoutPosts>
-        <NavElementDeletePosts onClick={deleteAccount}>Supprimer son compte</NavElementDeletePosts>
+        <Link 
+        style={linkStyle} 
+        to="/create-post">
+          <NavCreatePosts>
+            Créer une publication
+            </NavCreatePosts>
+          </Link>
+        <NavElementLogoutPosts 
+        onClick={logout}>
+          Se déconnecter
+        </NavElementLogoutPosts>
+        <NavElementDeletePosts 
+        onClick={deleteAccount}>
+          Supprimer son compte
+        </NavElementDeletePosts>
       </NavShape>
       <UlElement id="seeAll">
         {
           posts.map((post) => (
-            <LiElement key={post._id} id={post._id}><Link style={linkStyle} to={`/see-one/${post._id}`}>{post.name}</Link></LiElement>
+            <LiElement
+              key={post._id}
+              id={post._id}>
+              <Link
+                style={linkStyle}
+                to={`/see-one/${post._id}`}>
+                {post.name}
+              </Link>
+            </LiElement>
           )
           )}
       </UlElement>
-    
+
     </>
   );
 }

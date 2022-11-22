@@ -41,7 +41,7 @@ exports.delete = (req, res, next) => {
           Post.deleteOne({ _id: req.params.id })
             .then(() => res.status(200).json({ message: "Post supprimé" }))
             .catch((error) => res.status(400).json({ error }));
-          console.log("Post supprimé");
+          //console.log("Post supprimé");
         });
       }
     })
@@ -94,6 +94,7 @@ exports.modify = (req, res, next) => {
 
 exports.displayAll = (req, res, next) => {
   //console.log("Affichage de tous les posts");
+  
   Post.find().sort({createdAt: -1})
     .then((posts) => {
       //console.log(posts[0]);
@@ -107,7 +108,8 @@ exports.displayAll = (req, res, next) => {
 };
 
 exports.like = (req, res, next) => {
-  Post.findOne({ _id: req.params.id }).then((post) => {
+  Post.findOne({ _id: req.params.id })
+  .then((post) => {
     if(post.usersLiked.includes(req.auth.userId)) {
       Post.updateOne(
         {_id: req.params.id},

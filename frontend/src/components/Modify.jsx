@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { AiOutlineCheck } from 'react-icons/ai';
 import React, { useState, useEffect } from "react";
-import {  FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
+import { FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
 import { NavSeePostsModify, NavTitle, NavShape, NavElementLogoutModify, NavElementDeleteModify } from "../utils/style/Navbars"
 import { TbWorld } from "react-icons/tb"
 
@@ -37,10 +37,11 @@ const Modify = () => {
 
   const [post, setPost] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:4000/api/posts/${params.id}`).then((res) => {
-      setPost(res.data);
-      
-    });
+    axios.get(`http://localhost:4000/api/posts/${params.id}`)
+      .then((res) => {
+        setPost(res.data);
+
+      });
   }, []);
 
   const onSubmit = (data) => {
@@ -61,32 +62,50 @@ const Modify = () => {
 
   return (
     <>
-      
-        <NavShape>
-          <NavTitle>Modifier</NavTitle>
-          <Link style={linkStyle} to="/my-posts"><NavSeePostsModify>Voir les publications</NavSeePostsModify></Link>
-          <NavElementLogoutModify onClick={logout}>Se déconnecter</NavElementLogoutModify>
-          <NavElementDeleteModify onClick={deleteAccount}>Supprimer son compte</NavElementDeleteModify>
-        </NavShape>
-        <FormStyle onSubmit={handleSubmit(onSubmit)}>
-          <InputStyle
-            type="text"
-            name="titre"
-            value={post.name}
-            {...register("name", { required: true })}
-          />
-          <Textarea
-            value={post.description}
-            rows="8"
-            {...register("description", { required: true })}
-          />
-          <LabelStyle htmlFor="imageUrl">Image</LabelStyle>
-          <InputNone id="imageUrl" type="file" name="imageUrl" placeholder='image' {...register('imageUrl', { required: true })} />
-          <ValidateStyle type="submit" placeholder='valider'>
-            <AiOutlineCheck />
-          </ValidateStyle>
-        </FormStyle>
-      
+
+      <NavShape>
+        <NavTitle>Modifier</NavTitle>
+        <Link
+          style={linkStyle}
+          to="/my-posts">
+          <NavSeePostsModify>
+            Voir les publications
+          </NavSeePostsModify>
+        </Link>
+        <NavElementLogoutModify
+          onClick={logout}>
+          Se déconnecter
+        </NavElementLogoutModify>
+        <NavElementDeleteModify
+          onClick={deleteAccount}>
+          Supprimer son compte
+        </NavElementDeleteModify>
+      </NavShape>
+      <FormStyle onSubmit={handleSubmit(onSubmit)}>
+        <InputStyle
+          type="text"
+          name="titre"
+          value={post.name}
+          {...register("name", { required: true })}
+        />
+        <Textarea
+          value={post.description}
+          rows="8"
+          {...register("description", { required: true })}
+        />
+        <LabelStyle htmlFor="imageUrl">Image</LabelStyle>
+        <InputNone
+          id="imageUrl"
+          type="file"
+          name="imageUrl"
+          placeholder='image' {...register('imageUrl', { required: true })} />
+        <ValidateStyle
+          type="submit"
+          placeholder='valider'>
+          <AiOutlineCheck />
+        </ValidateStyle>
+      </FormStyle>
+
     </>
   );
 };

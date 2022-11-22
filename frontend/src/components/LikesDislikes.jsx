@@ -19,20 +19,13 @@ const LikesDislikes = ({ post }) => {
 
   function LikeBack() {
     const numberLikes = { like: likeActive ? 0 : 1 };
-    axios.post(`http://localhost:4000/api/posts/${params.id}/like`, numberLikes).then((res) => {
-      setLikeActive(res.data.likeActive)
-    //   if (likeActive) {
-    //     setLike(like - 1);
-    //   } else {
-    //     setLike(like + 1)
-    //   }
-    //ou
-    //const newLike = likeActive ? like - 1 : like + 1
-    //setLike(newLike)
-     })
+    axios.post(`http://localhost:4000/api/posts/${params.id}/like`, numberLikes)
+      .then((res) => {
+        setLikeActive(res.data.likeActive)
+      })
     likeActive ? setLike(like - 1) : setLike(like + 1)
-    
-    
+
+
       .catch((error) => {
         console.log(error)
       })
@@ -42,7 +35,10 @@ const LikesDislikes = ({ post }) => {
   return (
     <>
       <LikeAndDislike>
-        <Like onClick={LikeBack}><BsHandThumbsUp />{like}</Like>
+        <Like
+          onClick={LikeBack}>
+          <BsHandThumbsUp />{like}
+        </Like>
       </LikeAndDislike>
     </>
   )

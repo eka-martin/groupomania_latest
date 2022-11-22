@@ -31,8 +31,9 @@ const Home = () => {
     <>
       <MainImageLogin></MainImageLogin>
       <SuperContainer>
-        <Groupomania>Groupomania</Groupomania>
+
         <LoginCard>
+          <Groupomania>Groupomania</Groupomania>
           <MainTitle>Se connecter</MainTitle>
           <form onSubmit={handleSubmit(onSubmit)}>
             <InputStyle
@@ -53,9 +54,15 @@ const Home = () => {
               value="Valider">
             </ValidateStyle>
           </form>
+          <RedirectSignup>Pas encore inscrit ? Créez un compte
+            <Link
+              style={linkStyle}
+              to="/signup">ici
+            </Link>
+          </RedirectSignup>
         </LoginCard>
       </SuperContainer>
-      <RedirectSignup>Pas encore inscrit ? Créez un compte <Link style={linkStyle} to="/signup">ici</Link></RedirectSignup>
+
     </>
   )
 }

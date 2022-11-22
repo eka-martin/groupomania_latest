@@ -92,9 +92,6 @@ export const MainTitle = styled.h2`
     left: -10%;
   }
 `;
-export const InsistOnBlue = styled.span`
-  color: black;
-`;
 export const InputStyle = styled.input`
   width: 100%;
   height: 25px;
@@ -161,8 +158,10 @@ export const ValidateStyle = styled.input`
 `;
 export const LoginCard = styled.div`
   position: absolute;
-  right: 30%;
-  top: 100%;
+  width: 600px;
+  height: 600px;
+  
+  background-color: white;
   @media (max-width: 820px) {
     left: 17%;
     top: 150%;
