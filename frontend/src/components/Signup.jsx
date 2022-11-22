@@ -43,9 +43,23 @@ function Signup() {
           <Groupomania>Groupomania</Groupomania>
           <MainTitle>Créer un compte</MainTitle>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <InputStyle type="text" name="email" placeholder="email" rules={{ required: true }} {...register('email', { required: true })}></InputStyle>
-            <InputStyle type="password" name="password" placeholder="mot de passe" rules={{ required: true }} {...register('password', { required: true })}></InputStyle>
-            <ValidateStyle type="submit" name="valider" value="Valider"></ValidateStyle>
+            <InputStyle
+              type="text"
+              name="email"
+              placeholder="email"
+              rules={{ required: true }} {...register('email', { required: true })}>
+            </InputStyle>
+            <InputStyle
+              type="password"
+              name="password"
+              placeholder="mot de passe"
+              rules={{ required: true }} {...register('password', { required: true })}>
+            </InputStyle>
+            <ValidateStyle
+              type="submit"
+              name="valider"
+              value="Valider">
+            </ValidateStyle>
           </form>
           <RedirectSignup>
             Vous avez déjà un compte ? Connectez-vous
