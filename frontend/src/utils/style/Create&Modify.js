@@ -1,20 +1,6 @@
 import styled from "styled-components";
-// import img from "../../assets/create.jpg";
-// import img2 from "../../assets/modify.jpg";
 import colors from "./colors";
 
-// Only for Create page
-// export const MainImageCreate = styled.div`
-//   background: url(${img}) no-repeat center/cover;
-//   height: 100vh;
-//   width: 100%;
-// `;
-// Only for Modify page
-// export const MainImageModify = styled.div`
-//   background: url(${img2}) no-repeat center/cover;
-//   height: 100vh;
-//   width: 100%;
-// `;
 // Works for both
 export const FormStyle = styled.form`
   position: absolute;

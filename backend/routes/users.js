@@ -8,7 +8,7 @@ const getOneUser = require("../controllers/users");
 const getAllUsers = require("../controllers/users");
 
 module.exports = () => {
-  console.log("test de l'export user passé");
+  //console.log("test de l'export user passé");
   router.use("/auth/login", login.login);
   router.use("/auth/signup", signup.signup);
   router.use("/auth/delete", auth, deleteUser.delete);

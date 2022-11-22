@@ -1,12 +1,7 @@
 import styled from "styled-components";
-//import img from "../../assets/see-one.jpg";
 import colors from "./colors";
 
-// export const MainImageSeeOne = styled.div`
-//   background: url(${img}) no-repeat center/cover;
-//   height: 100vh;
-//   width: 100%;
-// `;
+
 export const PostCard = styled.div`
   position: fixed;
   left: 23%;

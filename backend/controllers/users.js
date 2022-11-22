@@ -58,11 +58,11 @@ exports.signup = (req, res, next) => {
 };
 
 exports.delete = (req, res, next) => {
-  console.log(req.auth.userId);
+  //console.log(req.auth.userId);
   User.findByIdAndRemove(req.auth.userId)
     .exec()
     .then((doc) => {
-      console.log(doc);
+      //console.log(doc);
       if (!doc) {
         return res.status(404).end();
       }

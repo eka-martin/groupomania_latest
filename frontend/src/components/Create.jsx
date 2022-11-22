@@ -28,14 +28,10 @@ const Edit = () => {
     color: "black",
   };
   const fileInput = useRef();
-  // const selectFile = () => {
-  //   fileInput.current.click();
-  // }
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = data => {
-    // console.log(data)
     const formData = new FormData();
     formData.append("image", data.imageUrl[0])
     formData.append("name", data.name)
@@ -70,7 +66,5 @@ const Edit = () => {
     </>
   )
 }
-/*
-<input type="file" style={{ "display": "none" }} ref={fileInput} />
-            <button onClick={selectFile}>Image</button>*/
+
 export default Edit;

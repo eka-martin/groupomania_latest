@@ -1,12 +1,7 @@
 import styled from "styled-components";
-//import img from "../../assets/rafiki.png";
 import colors from "./colors";
 
-// export const MainImagePosts = styled.div`
-//   background: url(${img}) no-repeat center/cover;
-//   height: 100vh;
-//   width: 100%;
-// `;
+
 export const UlElement = styled.ul`
   position: absolute;
   left: 20%;

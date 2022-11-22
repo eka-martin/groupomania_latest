@@ -33,26 +33,11 @@ const Notes = () => {
       .get("http://localhost:4000/api/posts")
       .then((res) => {
         setPosts(res.data);
-        //console.log(res.data)
-
-      })
+        })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-
-  /* const [user, setUser] = useState([]);
-useEffect(() => {
-axios
-.get("http://localhost:4000/api/auth/")
-.then((res) => {
-setUser(res.data);
-console.log(res.data)
-})
-.catch((err) => {
-console.log(err);
-});
-}, []);*/
 
   return (
     <>

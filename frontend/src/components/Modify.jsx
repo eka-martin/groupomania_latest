@@ -32,7 +32,6 @@ const Modify = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -40,7 +39,7 @@ const Modify = () => {
   useEffect(() => {
     axios.get(`http://localhost:4000/api/posts/${params.id}`).then((res) => {
       setPost(res.data);
-      console.log(res.data);
+      
     });
   }, []);
 

@@ -10,10 +10,10 @@ module.exports = (req, res, next) => {
       userId: userId,
       admin: admin,
     };
-    console.log(req.body);
+    //console.log(req.body);
     next();
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     res.status(401).json({ error });
   }
 };

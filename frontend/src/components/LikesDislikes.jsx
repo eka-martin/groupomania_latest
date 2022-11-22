@@ -21,18 +21,18 @@ const LikesDislikes = ({ post }) => {
     const numberLikes = { like: likeActive ? 0 : 1 };
     axios.post(`http://localhost:4000/api/posts/${params.id}/like`, numberLikes).then((res) => {
       setLikeActive(res.data.likeActive)
-      //console.log("test" + res.data);
-      if (likeActive) {
-        setLike(like - 1);
-      } else {
-        setLike(like + 1)
-      }
-    })
-    // TODO ниже приведу пример как я бы это записал
-    //likeActive ? setLike(like - 1) : setLike(like + 1)
-    // TODO или же так
+    //   if (likeActive) {
+    //     setLike(like - 1);
+    //   } else {
+    //     setLike(like + 1)
+    //   }
+    //ou
     //const newLike = likeActive ? like - 1 : like + 1
     //setLike(newLike)
+     })
+    likeActive ? setLike(like - 1) : setLike(like + 1)
+    
+    
       .catch((error) => {
         console.log(error)
       })

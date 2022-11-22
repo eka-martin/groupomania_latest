@@ -4,9 +4,9 @@ const Post = require("../models/post");
 const fs = require("fs");
 
 exports.create = (req, res, next) => {
-  console.log(req.body);
+  //console.log(req.body);
   const postObject = req.body;
-  console.log(req.auth);
+  //console.log(req.auth);
   delete postObject._id;
   const post = new Post({
     ...postObject,
@@ -30,7 +30,7 @@ exports.create = (req, res, next) => {
 };
 
 exports.delete = (req, res, next) => {
-  console.log(req.auth.admin, "admin");
+  //console.log(req.auth.admin, "admin");
   Post.findOne({ _id: req.params.id })
     .then((post) => {
       if (post.userId != req.auth.userId && req.auth.admin == false) {
@@ -96,7 +96,7 @@ exports.displayAll = (req, res, next) => {
   //console.log("Affichage de tous les posts");
   Post.find().sort({createdAt: -1})
     .then((posts) => {
-      console.log(posts[0]);
+      //console.log(posts[0]);
       res.status(200).json(posts);
     })
     .catch((error) => {
