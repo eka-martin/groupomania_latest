@@ -40,7 +40,7 @@ function Signup() {
       <MainImageSignup></MainImageSignup>
       <SuperContainer>
         <LoginCard>
-          <Groupomania>Groupomania</Groupomania>
+          <Groupomania></Groupomania>
           <MainTitle>Créer un compte</MainTitle>
           <form onSubmit={handleSubmit(onSubmit)}>
             <InputStyle
@@ -65,7 +65,7 @@ function Signup() {
             Vous avez déjà un compte ? Connectez-vous
             <Link
               style={linkStyle}
-              to="/">ici
+              to="/"> ici
             </Link>
           </RedirectSignup>
         </LoginCard>

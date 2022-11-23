@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios"
-import { MainImageLogin, MainTitle, SuperContainer, LoginCard, Groupomania, InsistOnBlue, InputStyle, ValidateStyle, RedirectSignup } from "../utils/style/Login&Signup"
+import { MainImageLogin, MainTitle, SuperContainer, LoginCard, Groupomania, InputStyle, ValidateStyle, RedirectSignup } from "../utils/style/Login&Signup"
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -31,9 +31,8 @@ const Home = () => {
     <>
       <MainImageLogin></MainImageLogin>
       <SuperContainer>
-
         <LoginCard>
-          <Groupomania>Groupomania</Groupomania>
+          <Groupomania></Groupomania>
           <MainTitle>Se connecter</MainTitle>
           <form onSubmit={handleSubmit(onSubmit)}>
             <InputStyle
@@ -57,11 +56,12 @@ const Home = () => {
           <RedirectSignup>Pas encore inscrit ? Créez un compte
             <Link
               style={linkStyle}
-              to="/signup">ici
+              to="/signup"> ici
             </Link>
           </RedirectSignup>
         </LoginCard>
       </SuperContainer>
+      
 
     </>
   )

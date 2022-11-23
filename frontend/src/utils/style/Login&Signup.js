@@ -11,85 +11,61 @@ export const MainImageLogin = styled.div`
   width: 100%;
 `;
 export const RedirectSignup = styled.p`
-  position: absolute;
-  bottom: 0%;
-  left: 1%;
-  font-size: 30px;
+  
+  text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
   color: black;
-  @media (max-width: 820px) {
-    bottom: 2%;
-  }
-  @media (max-width: 630px) {
-    bottom: 0%;
-    font-size: 25px;
-  }
-  @media (max-width: 414px) {
-    bottom: 0%;
-    left: 5%;
-    width: 90%;
+  @media (max-width: 768px) {
+    
   }
   @media (max-width: 375px) {
-    left: 5%;
-    bottom: 0%;
     font-size: 23px;
   }
 `;
 // Specific styles for signup
 export const MainImageSignup = styled.div`
   background: url(${illustrationSign}) no-repeat center/cover;
+  display: flex;
   height: 100vh;
   width: 100%;
 `;
 // Generic styles for both
 
 export const SuperContainer = styled.div`
-  position: absolute;
-  left: 55%;
-  top: 0%;
-  transform: translateX(-50%);
-  width: 50%;
-  @media (max-width: 820px) {
-    width: 90%;
-    left: 55%;
-  }
-`;
-export const Groupomania = styled.h1`
-  font-size: 65px;
-  color: black;
-  position: relative;
-  left: 10%;
-  padding-top: 100px;
-  width: 100%;
-  @media (max-width: 820px) {
-    left: 15%;
-    width: 80%;
-  }
-  @media (max-width: 554px) {
-    left: -5%;
-  }
-  @media (max-width: 440px) {
-    font-size: 55px;
-    left: 0%;
-  }
-  @media (max-width: 393px) {
-    font-size: 45px;
-    left: 0%;
-  }
-  @media (max-width: 414px) {
-    left: 0%;
-    padding-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+position: absolute;
+    @media (max-width: 768px) {
+    
   }
   @media (max-width: 375px) {
-    left: -7%;
+    
+  }
+`;
+export const Groupomania = styled.div`
+background-image: url(${logo});
+  position: relative;
+  
+  padding-top: 100px;
+  width: 100%;
+  height: 200px;
+  @media (max-width: 768px) {
+    
+  }
+  @media (max-width: 375px) {
+    
   }
 `;
 export const MainTitle = styled.h2`
-  color: black;
+  color: ${colors.thirdly};
   text-align: center;
-  font-size: 35px;
+  margin-bottom: 40px;
+  font-size: 30px;
   position: relative;
   @media (max-width: 375px) {
-    left: -10%;
+    
   }
 `;
 export const InputStyle = styled.input`
@@ -102,27 +78,19 @@ export const InputStyle = styled.input`
   padding: 2rem;
   border-bottom-color: #eee;
   font-size: 30px;
-  color: black;
+  color: ${colors.thirdly};
   &:hover {
     border-bottom: 4px solid;
     border-bottom-color: #eee;
   }
-  &::placeholder {
-    color: black};
-  }
   &:focus {
     outline: none;
   }
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     font-size: 25px;
     width: 70%;
   }
-  @media (max-width: 414px) {
-    font-size: 27px;
-  }
-  @media (max-width: 397px) {
-    font-size: 25px;
-  }
+  
   @media (max-width: 375px) {
     width: 70%;
     font-size: 23px;
@@ -133,23 +101,17 @@ export const ValidateStyle = styled.input`
   height: 100px;
   border: none;
   background-color: transparent;
-  color: #eee;
+  color: ${colors.thirdly};
   font-size: 35px;
   padding: 2rem;
   cursor: pointer;
   border-bottom-color: #eee;
   &:hover {
-    border-bottom-color: #eee;
+    color: ${colors.primary};
     border-bottom: 3px solid;
   }
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     width: 80%;
-  }
-  @media (max-width: 414px) {
-    width: 60%;
-  }
-  @media (max-width: 397px) {
-    font-size: 25px;
   }
   @media (max-width: 375px) {
     width: 100%;
@@ -158,19 +120,16 @@ export const ValidateStyle = styled.input`
 `;
 export const LoginCard = styled.div`
   position: absolute;
+  margin-top: 100px;
   width: 600px;
   height: 600px;
-  
+  box-shadow: 0px 6px 8px rgba(25, 50, 47, 0.08),0px 3px 4px rgba(18, 71, 52, 0.02), 0px 1px 16px rgba(18, 71, 52, 0.03);
   background-color: white;
-  @media (max-width: 820px) {
-    left: 17%;
-    top: 150%;
+  @media (max-width: 768px) {
+    
   }
-  @media (max-width: 525px) {
-    top: 100%;
+  @media (max-width: 375px) {
+    
   }
-  @media (max-width: 414px) {
-    right: 20%;
-    top: 100%;
-  }
+ 
 `;

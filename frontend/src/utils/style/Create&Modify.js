@@ -10,11 +10,11 @@ export const FormStyle = styled.form`
   flex-direction: column;
   width: 50%;
   height: 80%;
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     left: 20%;
     top: 20%;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     left: 20%;
   }
 `;
@@ -34,11 +34,11 @@ export const InputStyle = styled.input`
     color: black;
     opacity: 0.5;
   }
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     width: 40%;
     left: 25%;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     width: 60%;
     left: 15%;
     font-size: 15px;
@@ -58,14 +58,12 @@ export const Textarea = styled.textarea`
     color: black;
     opacity: 0.5;
   }
-  @media (max-width: 863px) {
+  @media (max-width: 768px) {
     position: relative;
     left: 10%;
   }
-  @media (max-width: 820px) {
-    width: 100%;
-  }
-  @media (max-width: 414px) {
+ 
+  @media (max-width: 375px) {
     width: 100%;
     left: 20%;
     font-size: 15px;
@@ -85,12 +83,12 @@ export const ValidateStyle = styled.button`
   &:hover {
     opacity: 0.9;
   }
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     width: 20%;
     left: 45%;
     height: 5%;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     width: 20%;
     left: 50%;
   }
@@ -114,11 +112,11 @@ export const LabelStyle = styled.label`
   &:hover {
     opacity: 0.9;
   }
-  @media (max-width: 820px) {
+  @media (max-width: 768px) {
     width: 40%;
     left: 25%;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     width: 60%;
     left: 15%;
     font-size: 15px;
