@@ -5,7 +5,7 @@ Groupomania is an internal social media for the workers of a company created wit
 
 
 ## Launch Project
-.env (backend folder)  
+You have to create a file .env in backend folder and type a URL of your data base and any code for token
 SECRET_CONNECTION=""  
 SECRET_TOKEN="" 
 
