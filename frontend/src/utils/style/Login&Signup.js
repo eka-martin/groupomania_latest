@@ -2,6 +2,8 @@ import styled from "styled-components";
 import illustration from "../../assets/illustration-home.png";
 import illustrationSign from "../../assets/illustration-signup.png";
 import logo from "../../assets/groupomania.png";
+import logo1 from "../../assets/logo-groupomania.png"
+import logo2 from "../../assets/logo-groupomania-mini.png"
 import colors from "./colors";
 
 // Specific styles for login
@@ -9,6 +11,7 @@ export const MainImageLogin = styled.div`
   background: url(${illustration}) no-repeat center/cover;
   height: 100vh;
   width: 100%;
+  display: flex;
 `;
 export const RedirectSignup = styled.p`
   
@@ -17,10 +20,10 @@ export const RedirectSignup = styled.p`
   font-size: 20px;
   color: black;
   @media (max-width: 768px) {
-    
+    font-size: 14px;
   }
   @media (max-width: 375px) {
-    font-size: 23px;
+    font-size: 12px;
   }
 `;
 // Specific styles for signup
@@ -45,17 +48,17 @@ position: absolute;
   }
 `;
 export const Groupomania = styled.div`
-background-image: url(${logo});
-  position: relative;
+background-image: url(${logo}) ;
   
   padding-top: 100px;
   width: 100%;
   height: 200px;
   @media (max-width: 768px) {
+    background-image: url(${logo1}) ;
     
   }
   @media (max-width: 375px) {
-    
+    background-image: url(${logo2})
   }
 `;
 export const MainTitle = styled.h2`
@@ -64,8 +67,12 @@ export const MainTitle = styled.h2`
   margin-bottom: 40px;
   font-size: 30px;
   position: relative;
+  @media (max-width: 768px) {
+    font-size: 25px;
+    margin-top: 30px;
+  }
   @media (max-width: 375px) {
-    
+    font-size: 15px;
   }
 `;
 export const InputStyle = styled.input`
@@ -87,13 +94,13 @@ export const InputStyle = styled.input`
     outline: none;
   }
   @media (max-width: 768px) {
-    font-size: 25px;
-    width: 70%;
+    font-size: 22px;
+    
   }
   
   @media (max-width: 375px) {
-    width: 70%;
-    font-size: 23px;
+    
+    font-size: 18px;
   }
 `;
 export const ValidateStyle = styled.input`
@@ -111,11 +118,12 @@ export const ValidateStyle = styled.input`
     border-bottom: 3px solid;
   }
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
+    font-size: 25px;
   }
   @media (max-width: 375px) {
     width: 100%;
-    font-size: 23px;
+    font-size: 15px;
   }
 `;
 export const LoginCard = styled.div`
@@ -126,7 +134,8 @@ export const LoginCard = styled.div`
   box-shadow: 0px 6px 8px rgba(25, 50, 47, 0.08),0px 3px 4px rgba(18, 71, 52, 0.02), 0px 1px 16px rgba(18, 71, 52, 0.03);
   background-color: white;
   @media (max-width: 768px) {
-    
+    width: 400px;
+  7
   }
   @media (max-width: 375px) {
     

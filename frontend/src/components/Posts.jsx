@@ -43,36 +43,37 @@ const Notes = () => {
     <>
       <NavShape>
         <NavTitle>Publications</NavTitle>
-        <Link 
-        style={linkStyle} 
-        to="/create-post">
+        <Link
+          style={linkStyle}
+          to="/create-post">
           <NavCreatePosts>
             Créer une publication
-            </NavCreatePosts>
-          </Link>
-        <NavElementLogoutPosts 
-        onClick={logout}>
+          </NavCreatePosts>
+        </Link>
+        <NavElementLogoutPosts
+          onClick={logout}>
           Se déconnecter
         </NavElementLogoutPosts>
-        <NavElementDeletePosts 
-        onClick={deleteAccount}>
+        <NavElementDeletePosts
+          onClick={deleteAccount}>
           Supprimer son compte
         </NavElementDeletePosts>
       </NavShape>
-      <UlElement id="seeAll">
-        {
-          posts.map((post) => (
-            <LiElement
-              key={post._id}
-              id={post._id}>
-              <Link
-                style={linkStyle}
-                to={`/see-one/${post._id}`}>
-                {post.name}
-              </Link>
-            </LiElement>
-          )
-          )}
+      <UlElement>
+        {posts.map((post) => (
+          <LiElement
+            key={post._id}
+            id={post._id}>
+            <Link
+              style={linkStyle}
+              to={`/see-one/${post._id}`}>
+              {post.name}
+              <br></br>
+              {post.description}
+            </Link>
+          </LiElement>
+        )
+        )}
       </UlElement>
 
     </>

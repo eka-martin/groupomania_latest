@@ -85,11 +85,11 @@ const Modify = () => {
         <InputStyle
           type="text"
           name="titre"
-          value={post.name}
+          defaultValue={post.name}
           {...register("name", { required: true })}
         />
         <Textarea
-          value={post.description}
+          defaultValue={post.description}
           rows="8"
           {...register("description", { required: true })}
         />
