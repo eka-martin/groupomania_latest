@@ -4,22 +4,15 @@ import colors from "../style/colors";
 export const NavShape = styled.nav`
   position: absolute;
   left: 0%;
-  height: 100vh;
+  height: 100%;
   background-color:  ${colors.secondary};
-      @media (max-width: 820px) {
+  @media (max-width: 768px) {
     height: 18vh;
-    left: 0.3%;
     width: 100%;
     display: flex;
     flex-direction: row;
   }
-  @media (max-width: 768px) {
-    height: 18vh;
-    width: 99%;
-  }
-  @media (max-width: 414px) {
-    height: 15vh;
-  }
+  
   @media (max-width: 375px) {
     height: 15vh;
     width: 100%;
@@ -36,21 +29,16 @@ export const NavTitle = styled.li`
   padding-top: 25px;
   font-size: 35px;
   font-weight: 600;
-  @media (max-width: 820px) {
-    font-size: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
     left: 38%;
     top: -15%;
   }
-  @media (max-width: 768px) {
-    left: 35%;
-  }
-  @media (max-width: 414px) {
-    font-size: 22px;
-    top: -20%;
-    left: 40%;
-  }
+ 
   @media (max-width: 375px) {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 200;
     top: -20%;
     left: 35%;
   }
@@ -63,18 +51,17 @@ export const NavTitleCreate = styled.li`
   padding-top: 25px;
   font-size: 35px;
   font-weight: 600;
-  @media (max-width: 820px) {
-    font-size: 40px;
-    left: 38%;
-  }
+  
   @media (max-width: 768px) {
-    left: 40%;
+    font-size: 28px;
+    left: 38%;
     margin-top: 3rem;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     font-size: 22px;
     top: -80%;
     left: 35%;
+    font-weight: 200;
   }
 `;
 export const NavTitleSee = styled.li`
@@ -85,18 +72,17 @@ export const NavTitleSee = styled.li`
   padding-top: 25px;
   font-size: 35px;
   font-weight: 600;
-  @media (max-width: 820px) {
-    font-size: 40px;
-    left: 42%;
-  }
+  
   @media (max-width: 768px) {
-    left: 40%;
+    font-size: 28px;
+    left: 42%;
     margin-top: 0rem;
   }
-  @media (max-width: 414px) {
+  @media (max-width: 375px) {
     font-size: 22px;
     top: 0%;
     left: 42%;
+    font-weight: 200;
   }
 `;
 //////////////////////////////////
@@ -114,20 +100,16 @@ export const NavElement = styled.li`
   &:hover {
     color: ${colors.primary};
   }
-  @media (max-width: 820px) {
-    font-size: 25px;
+  
+  @media (max-width: 768px) {
+    font-size: 28px;
     top: 5%;
     left: -30%;
   }
-  @media (max-width: 768px) {
-    left: -30%;
-  }
-  @media (max-width: 488px) {
-    font-size: 22px;
-  }
-  @media (max-width: 414px) {
+  
+  @media (max-width: 375px) {
     font-size: 15px;
-    top: -20%;
+    top: -30%;
     left: -30%;
     margin: 5px;
   }
@@ -143,13 +125,11 @@ export const NavCreatePosts = styled.li`
   &:hover {
     color: ${colors.primary};
   }
-  @media (max-width: 820px) {
+  
+  @media (max-width: 768px) {
     font-size: 25px;
     top: -10%;
     left: -85%;
-  }
-  @media (max-width: 768px) {
-    left: -100%;
   }
   @media (max-width: 584px) {
     left: -150%;
@@ -160,15 +140,12 @@ export const NavCreatePosts = styled.li`
   @media (max-width: 480px) {
     left: -200%;
   }
-  @media (max-width: 414px) {
+  
+  @media (max-width: 375px) {
     font-size: 15px;
     top: -15%;
     left: -90%;
     margin: 5px;
-  }
-  @media (max-width: 375px) {
-    top: -20%;
-    left: -100%;
   }
 `;
 export const NavSeePosts = styled.li`

@@ -23,6 +23,7 @@ export const RedirectSignup = styled.p`
     font-size: 14px;
   }
   @media (max-width: 375px) {
+    padding-top: 20px;
     font-size: 12px;
   }
 `;
@@ -58,7 +59,8 @@ background-image: url(${logo}) ;
     
   }
   @media (max-width: 375px) {
-    background-image: url(${logo2})
+    background-image: url(${logo2});
+    
   }
 `;
 export const MainTitle = styled.h2`
@@ -135,10 +137,10 @@ export const LoginCard = styled.div`
   background-color: white;
   @media (max-width: 768px) {
     width: 400px;
-  7
+    
   }
   @media (max-width: 375px) {
-    
+       
   }
  
 `;

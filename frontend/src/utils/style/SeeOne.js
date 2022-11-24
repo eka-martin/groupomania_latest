@@ -5,10 +5,10 @@ import colors from "./colors";
 export const PostCard = styled.div`
   position: fixed;
   left: 23%;
-  top: 5%;
+  top: 10%;
   height: 200px;
-  margin-right: 500px;
-  margin-left: 100px;
+  margin-right: 300px;
+  margin-left: 80px;
   
   @media (max-width: 768px) {
     left: 5%;
@@ -21,9 +21,9 @@ export const PostCard = styled.div`
 `;
 export const PostName = styled.h1`
   position: relative;
-  left: 50%;
   color: black;
-  font-size: 40px;
+  font-size: 35px;
+  margin-bottom: 10px;
   
   @media (max-width: 768px) {
     left: 20%;
@@ -37,9 +37,8 @@ export const PostName = styled.h1`
 export const PostDescription = styled.p`
   position: relative;
   color: black;
-  font-size: 30px;
-  font-weight: 600;
-  
+  font-size: 20px;
+   
   @media (max-width: 768px) {
     left: -15%;
     font-size: 18px;
@@ -67,42 +66,44 @@ export const PostImage = styled.img`
   }
 `;
 export const Buttons = styled.div`
-  position: absolute;
-  left: 70%;
-  bottom: 40%;
+  position: relative;
+  top: 1200%;
+  left: 30%;
   
   @media (max-width: 768px) {
-    left: 32%;
-    bottom: 9%;
+    
   }
   
   @media (max-width: 375px) {
-    bottom: 10%;
-    left: 10%;
+    
   }
 `;
 export const ModifyButton = styled.button`
-  font-size: 30px;
+margin-top: 10px;  
+font-size: 25px;
   padding: 0.5rem;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px;
   position: relative;
   left: 0%;
-  background: linear-gradient(${colors.primary}, ${colors.secondary});
+  background-color:  ${colors.secondary};
   cursor: pointer;
   &:hover {
     opacity: 0.8;
+    color: ${colors.primary};
   }
 `;
 export const DeleteButton = styled.button`
-  font-size: 30px;
+  margin-top: 10px;
+font-size: 25px;
   padding: 0.5rem;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px;
   position: relative;
   right: -10%;
   cursor: pointer;
-  background: linear-gradient(${colors.primary}, ${colors.secondary});
+  background-color:  ${colors.secondary};
   &:hover {
     opacity: 0.8;
+    color: ${colors.primary};
   }
 `;
 export const LikeAndDislike = styled.div`
@@ -122,12 +123,12 @@ export const LikeAndDislike = styled.div`
 export const Like = styled.div`
   position: relative;
   left: 0%;
-  font-size: 40px;
+  font-size: 30px;
   color: black;
   display: inline-block;
   cursor: pointer;
   &:hover {
-    color: red;
+    color: ${colors.primary};
   }
   @media (max-width: 768px) {
     left: 100%;

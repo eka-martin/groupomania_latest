@@ -2,11 +2,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { AiOutlineCheck } from 'react-icons/ai';
 import React, { useState, useEffect } from "react";
 import { FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
 import { NavSeePostsModify, NavTitle, NavShape, NavElementLogoutModify, NavElementDeleteModify } from "../utils/style/Navbars"
-import { TbWorld } from "react-icons/tb"
+
 
 const Modify = () => {
   const deleteAccount = () => {
@@ -102,7 +101,7 @@ const Modify = () => {
         <ValidateStyle
           type="submit"
           placeholder='valider'>
-          <AiOutlineCheck />
+          Validate
         </ValidateStyle>
       </FormStyle>
 

@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"
 import { useForm } from "react-hook-form";
-import { AiOutlineCheck } from 'react-icons/ai'
 import React, { useRef } from 'react'
 import {  FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
 import { NavSeePosts, NavTitle, NavShape, NavElementLogoutCreate, NavElementDeleteCreate } from "../utils/style/Navbars"
@@ -59,7 +58,7 @@ const Edit = () => {
           <LabelStyle for="imageUrl">Image</LabelStyle>
           <InputNone id="imageUrl" type="file" name="imageUrl" placeholder='image' {...register('imageUrl', { required: true })} />
           <ValidateStyle type="submit" placeholder='valider'>
-            <AiOutlineCheck />
+            Validate
           </ValidateStyle>
         </FormStyle>
       
