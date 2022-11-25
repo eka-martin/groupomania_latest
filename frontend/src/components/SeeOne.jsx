@@ -28,11 +28,17 @@ const SeeOne = () => {
   const [post, setPost] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false)
 
+
+  
   useEffect(() => {
-    axios.get(`http://localhost:4000/api/posts/${params.id}`).then((res) => {
+    axios
+    .get(`http://localhost:4000/api/posts/${params.id}`)
+    .then((res) => {
       setPost(res.data);
     });
-    axios.get(`http://localhost:4000/api/auth/${localStorage.userId}`).then((res) => {
+    axios
+    .get(`http://localhost:4000/api/auth/${localStorage.userId}`)
+    .then((res) => {
       setIsAdmin(res.data.admin);
     })
   }, []);
