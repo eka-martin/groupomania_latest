@@ -26,8 +26,14 @@ const Notes = () => {
     color: "black",
     textUnderline: "none",
   };
+
+  //Le hook useState est utilisé pour stocker des variables 
+  //qui font partie de l'état d'une application et qui changeront au fur et à mesure 
+  //que l'utilisateur interagit avec un site Web.
   const [posts, setPosts] = useState([]);
 
+  //Le hook useEffect permet aux composants de réagir aux événements du cycle 
+  //de vie tels que le montage sur le DOM, le re-rendu et le démontage
   useEffect(() => {
     axios
       .get("http://localhost:4000/api/posts")

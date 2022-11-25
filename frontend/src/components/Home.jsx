@@ -10,7 +10,11 @@ const Home = () => {
     textDecoration: "none",
     color: "#fd230d",
   };
+  //useNavigation est un hook qui donne accès à l'objet de navigation. 
+  //C'est utile lorsque ons ne peut pas 
+  //passer directement le prop de navigation dans le composant
   const navigate = useNavigate();
+  
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     axios.post('http://localhost:4000/api/auth/login', data)

@@ -12,7 +12,7 @@ export const UlElement = styled.ul`
     
   }
   @media (max-width: 375px) {
-    margin-top: 50px;
+    top: 50%;
   }
 `;
 export const LiElement = styled.li`
@@ -41,5 +41,6 @@ export const LiElement = styled.li`
  
   @media (max-width: 375px) {
     font-size: 17px;
+    margin-top: 300px;
   }
 `;
