@@ -12,6 +12,9 @@ function Signup() {
     color: "#fd230d",
   };
   const navigate = useNavigate();
+  //Les objets FormData sont utilisés pour capturer le formulaire HTML 
+  //et le soumettre en utilisant fetch ou une autre méthode réseau
+
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     axios.post('http://localhost:4000/api/auth/signup', data)

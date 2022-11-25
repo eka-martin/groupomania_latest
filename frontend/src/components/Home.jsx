@@ -14,7 +14,8 @@ const Home = () => {
   //C'est utile lorsque ons ne peut pas 
   //passer directement le prop de navigation dans le composant
   const navigate = useNavigate();
-  
+  //Les objets FormData sont utilisés pour capturer le formulaire HTML 
+  //et le soumettre en utilisant fetch ou une autre méthode réseau
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
     axios.post('http://localhost:4000/api/auth/login', data)
