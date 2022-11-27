@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { PostCard, PostName, PostDescription, PostImage, Buttons, ModifyButton, DeleteButton, LikeAndDislike, Like, Dislike, ImageContainer } from "../utils/style/SeeOne"
-import { NavElement, NavTitleSee, NavShape, NavElementLogout, NavElementDelete } from "../utils/style/Navbars"
+import { NavElement, NavTitleSee, NavShape, NavElementLogout, NavElementDelete, Groupomania } from "../utils/style/Navbars"
 import Likes from "./LikesDislikes"
 
 const SeeOne = () => {
@@ -57,6 +57,7 @@ const SeeOne = () => {
   return (
     <>
       <NavShape>
+      <Groupomania></Groupomania>
         <NavTitleSee>Post</NavTitleSee>
         <Link
           style={linkStyle}

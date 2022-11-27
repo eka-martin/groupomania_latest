@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import logo2 from "../../assets/logo-groupomania-mini2.png"
 import colors from "../style/colors";
 
 export const NavShape = styled.nav`
@@ -20,6 +21,15 @@ export const NavShape = styled.nav`
 `;
 
 //Main titles for navbar all pages
+export const Groupomania = styled.div`
+background: url(${logo2}) center/cover;
+position: relative;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+ 
+`;
+
 
 export const NavTitle = styled.li`
   position: relative;

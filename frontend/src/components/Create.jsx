@@ -3,7 +3,7 @@ import axios from "axios"
 import { useForm } from "react-hook-form";
 import React from 'react'
 import { FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
-import { NavSeePosts, NavTitle, NavShape, NavElementLogoutCreate, NavElementDeleteCreate } from "../utils/style/Navbars"
+import { NavSeePosts, NavTitle, NavShape, NavElementLogoutCreate, NavElementDeleteCreate, Groupomania } from "../utils/style/Navbars"
 
 
 const Edit = () => {
@@ -52,6 +52,7 @@ const Edit = () => {
     <>
 
       <NavShape>
+      <Groupomania></Groupomania>
         <NavTitle>Créer</NavTitle>
         <Link
           style={linkStyle}

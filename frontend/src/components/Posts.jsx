@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { LiElement, UlElement } from "../utils/style/Posts"
-import { NavCreatePosts, NavTitle, NavShape, NavElementLogoutPosts, NavElementDeletePosts } from "../utils/style/Navbars"
+import { NavCreatePosts, NavTitle, NavShape, NavElementLogoutPosts, NavElementDeletePosts, Groupomania } from "../utils/style/Navbars"
 import { useNavigate } from "react-router-dom";
 
 const Notes = () => {
@@ -48,6 +48,7 @@ const Notes = () => {
   return (
     <>
       <NavShape>
+      <Groupomania></Groupomania>
         <NavTitle>Publications</NavTitle>
         <Link
           style={linkStyle}

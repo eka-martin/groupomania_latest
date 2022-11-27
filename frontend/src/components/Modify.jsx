@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { FormStyle, InputStyle, Textarea, ValidateStyle, LabelStyle, InputNone } from "../utils/style/Create&Modify"
-import { NavSeePostsModify, NavTitle, NavShape, NavElementLogoutModify, NavElementDeleteModify } from "../utils/style/Navbars"
+import { NavSeePostsModify, NavTitle, NavShape, NavElementLogoutModify, NavElementDeleteModify, Groupomania } from "../utils/style/Navbars"
 
 
 const Modify = () => {
@@ -63,6 +63,7 @@ const Modify = () => {
     <>
 
       <NavShape>
+      <Groupomania></Groupomania>
         <NavTitle>Modifier</NavTitle>
         <Link
           style={linkStyle}
