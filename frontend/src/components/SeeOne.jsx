@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { PostCard, PostName, PostDescription, PostImage, Buttons, ModifyButton, DeleteButton, LikeAndDislike, Like, Dislike, ImageContainer } from "../utils/style/SeeOne"
 import { NavElement, NavTitleSee, NavShape, NavElementLogout, NavElementDelete, Groupomania } from "../utils/style/Navbars"
 import Likes from "./LikesDislikes"
+const baseUrl = "http://localhost:3000/api/post/";
 
 const SeeOne = () => {
   const deleteAccount = () => {
@@ -28,19 +29,28 @@ const SeeOne = () => {
   const [post, setPost] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false)
 
-
+  const id = localStorage.getItem("id");
+  const token = localStorage.getItem("token");
+  const headers = {
+    Authorization: `Bearer ${token}`,
+  };
   
   useEffect(() => {
     axios
-    .get(`http://localhost:4000/api/posts/${params.id}`)
+    ({method: "get",
+      url: `http://localhost:4000/api/posts/${params.id}`,
+    headers: {
+       Authorization: `Bearer ${token}`,
+    },})
     .then((res) => {
       setPost(res.data);
+      //console.log(res.data)
     });
-    axios
-    .get(`http://localhost:4000/api/auth/${localStorage.userId}`)
-    .then((res) => {
-      setIsAdmin(res.data.admin);
-    })
+    // axios
+    // .get(`http://localhost:4000/api/auth/${localStorage.userId}`)
+    // .then((res) => {
+    //   setIsAdmin(res.data.admin);
+    // })
   }, []);
 
   const deletePost = (postId) => {
